@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="App3.MainPage2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="{ThemeResource SystemAccentColor}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Foreground="White" FontSize="25" Margin="20,0,0,0" Text="1. 로그인" />
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Row="1" Background="{ThemeResource SystemAccentColorDark1}">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Foreground="White" FontSize="25" Margin="20,0,0,0" Text="2. 수강 정보 입력" />
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Row="2">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Foreground="White" FontSize="25" Margin="20,0,0,0" Text="3. 대기중" />
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Row="3">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Foreground="White" FontSize="25" Margin="20,0,0,0" Text="4. 완료" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:ConnectionId='4' Text="Year" x:Name="textBlock_Year" Margin="40,0,0,0" FontSize="25" />
+                        </StackPanel>
+                    </Border>
+
+                    <StackPanel Grid.Row="1">
+                        <Grid x:ConnectionId='1'  x:Name="sugangList">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="210" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+                                <TextBlock Text="학수번호" FontSize="20" Margin="40,0,0,0" />
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                                <TextBlock Text="분반" FontSize="20" Margin="20,0,0,0" />
+                            </Border>
+                        </Grid>
+                        <StackPanel Orientation="Horizontal" Margin="190,10,0,0">
+                            <Button x:ConnectionId='2' Content="Add" Margin="0,0,0,0" Foreground="White"                         />
+                            <Button x:ConnectionId='3' Content="Apply" Margin="20,0,0,0" Foreground="White"                          />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="ButtonBackground" Color="{ThemeResource SystemAccentColor}"/>
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemAccentColorLight3}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource SystemAccentColorDark2}" />
+        </ResourceDictionary>
+    </Page.Resources>
+
+</Page>
+
